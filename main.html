@@ -19,6 +19,10 @@
             position: absolute;
         }
 
+        .top-left img, .buttom-left img, .right-middle img {
+            object-fit: cover;
+        }
+
         .top-left {
             height: 250px;
             width: 200px;
@@ -30,7 +34,7 @@
             height: 250px;
             width: 250px;
             left: 1350px;
-            top: 150px;
+            top: 350px;
         }
 
         .right-middle {
@@ -51,7 +55,6 @@
             font-size: 3.5rem;
             border-radius: 15px;
         }
-       
 
         .heart-container {
             display: inline-block;
@@ -74,30 +77,24 @@
             margin-top: 20px;
         }
 
-        .buttonYes {
+        .buttonYes, .buttonNo {
             position: absolute;
             background-color: white;
             padding: 20px 40px;
-            top: 50%;
-            left: 42%;
             border: none;
             border-radius: 15px;
             font-size: 1.5rem;
+        }
 
+        .buttonYes {
+            top: 50%;
+            left: 42%;
         }
 
         .buttonNo {
-            position: absolute;
-            background-color: white;
-            padding: 20px 40px;
             top: 50%;
             left: 53%;
-            border: none;
-            border-radius: 15px;
-            font-size: 1.5rem;
-
         }
-
     </style>
 </head>
 <body>
@@ -157,8 +154,8 @@
         ];
     
         function moveNoButton() {
-            const newLeft = Math.floor(Math.random() * 800);
-            const newTop = Math.floor(Math.random() * 800);
+            const newLeft = Math.floor(Math.random() * 500);
+            const newTop = Math.floor(Math.random() * 500);
     
             noButton.style.left = `${newLeft}px`;
             noButton.style.top = `${newTop}px`;
